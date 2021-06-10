@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[
+  `<CharacterCard /> should render the character card as div by default 1`
+] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  overflow: hidden;
+  background-image: url(https://rickandmortyapi.com/api/character/avatar/1.jpeg);
+  background-size: cover;
+  border-radius: 0.8rem;
+  border: 0.2rem solid #606060;
+  -webkit-backdrop-filter: blur(0);
+  backdrop-filter: blur(0);
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  height: 18.7rem;
+  width: 18.7rem;
+  background-position: center -3rem;
+}
+
+.c1 {
+  padding: 0.8rem 1.4rem;
+  background-color: #1B1B1B;
+  color: #ffffff;
+  font-family: 'Seravek',sans-serif;
+  width: 100%;
+  text-align: left;
+  background: rgba(0,0,0,0.6);
+  -webkit-backdrop-filter: blur(2.3rem);
+  backdrop-filter: blur(2.3rem);
+}
+
+.c2 {
+  font-size: 2.0rem;
+}
+
+.c3 {
+  font-size: 1.2rem;
+}
+
+<div
+  aria-label="Rick Sanchez card"
+  class="c0"
+>
+  <div
+    aria-label="Rick Sanchez's stripe with informations"
+    class="c1"
+  >
+    <h3
+      class="c2"
+    >
+      Rick Sanchez
+    </h3>
+    <p
+      class="c3"
+    >
+      Human
+    </p>
+  </div>
+</div>
+`
