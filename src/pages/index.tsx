@@ -1,8 +1,8 @@
 import { QUERY_CHARACTERS } from 'graphql/queries/home'
-import Home from 'templates/Home'
+import Home, { HomeTemplateProps } from 'templates/Home'
 import { initializeApollo } from 'utils/apollo'
 
-export default function Homepage(props) {
+export default function Homepage(props: HomeTemplateProps) {
   return <Home {...props} />
 }
 

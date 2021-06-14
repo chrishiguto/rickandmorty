@@ -32,7 +32,8 @@ export type HomeTemplateProps = {
   characters: CharacterProps[]
 }
 
-const Home = () => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Home = (props: HomeTemplateProps) => {
   const {
     register,
     handleSubmit,
