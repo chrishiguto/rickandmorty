@@ -1,5 +1,5 @@
 
-![Rick and Morty](image)
+![Rick and Morty](https://github.com/chrishiguto/rickandmorty/blob/main/public/img/heading.png)
 
 This is a [Next.js](https://nextjs.org/) project created for inGaia front-end challenge. It's a Rick and Morty application that uses the community api to fetch data of the characters.
 
@@ -20,8 +20,8 @@ This project uses lot of stuff as:
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [Husky](https://github.com/typicode/husky)
-- [GraphQL](https://github.com/typicode/husky)
-- [Apollo](https://github.com/typicode/husky)
+- [GraphQL](https://graphql.org/)
+- [Apollo](https://www.apollographql.com/docs/)
 
 ## Getting Started
 
