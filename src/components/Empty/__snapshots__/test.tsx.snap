@@ -49,6 +49,7 @@ exports[
     Looks like this character doesn't exist... Mhmm, try again!
   </p>
   <img
+    alt="Rick Sanchez not found image"
     class="c3"
     src="/img/404.png"
   />

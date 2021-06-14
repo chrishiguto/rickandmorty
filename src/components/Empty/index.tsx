@@ -13,7 +13,7 @@ const Empty = ({ onGoBack }: EmptyProps) => (
       {`Looks like this character doesn't exist... Mhmm, try again!`}
     </S.Description>
     {!!onGoBack && <Button onClick={onGoBack}>Go back</Button>}
-    <S.NotFound src={'/img/404.png'} />
+    <S.NotFound src={'/img/404.png'} alt="Rick Sanchez not found image" />
   </S.Wrapper>
 )
 
