@@ -1,0 +1,525 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CharacterView /> should render the character view 1`] = `
+.c4 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.c7 {
+  background: transparent;
+  padding: 0.8rem calc(1.6rem - 0.2rem);
+  font-size: 1.6rem;
+  font-weight: 700;
+  border: 2px solid #ffffff;
+  border-radius: 0.8rem;
+  color: #ffffff;
+  outline: none;
+  -webkit-transition: box-shadow,background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: box-shadow,background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.c7:hover {
+  background-color: #8C8C8C35;
+}
+
+.c7:focus-visible {
+  box-shadow: 0 0 0 0.3rem #cbd736;
+}
+
+.c10 {
+  color: #cbd736;
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 0.8rem;
+  -moz-letter-spacing: 0.8rem;
+  -ms-letter-spacing: 0.8rem;
+  letter-spacing: 0.8rem;
+  font-size: 1.4rem;
+}
+
+.c2 {
+  display: none;
+}
+
+.c6 {
+  display: none;
+}
+
+.c0 {
+  width: 100%;
+  height: 100%;
+  padding: 15rem 1.2rem 1.6rem 1.2rem;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  border-radius: calc(0.8rem * 2);
+  border: 0.2rem solid #1e1e1e;
+  box-shadow: 0px 4px 80px 0 #000;
+}
+
+.c3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 2.4rem;
+  margin-left: 2.4rem;
+  background: none;
+  border: none;
+}
+
+.c5 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-image: url(https://rickandmortyapi.com/api/character/avatar/1.jpeg);
+  background-size: cover;
+  background-position: center center;
+  height: 6rem;
+  border-top-left-radius: 1.4rem;
+  border-top-right-radius: 1.4rem;
+  z-index: 10;
+}
+
+.c5::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  -webkit-backdrop-filter: blur(2.8rem);
+  backdrop-filter: blur(2.8rem);
+  border-top-left-radius: 1.4rem;
+  border-top-right-radius: 1.4rem;
+  z-index: -1;
+}
+
+.c5 .sc-hKFxyN {
+  position: absolute;
+  top: -170%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 4rem;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: auto;
+  padding: 5.6rem 2.4rem;
+  background-color: rgba(0,0,0,0.98);
+  border-bottom-left-radius: 1.4rem;
+  border-bottom-right-radius: 1.4rem;
+}
+
+.c11 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  line-height: 2.2rem;
+  margin-top: 1.6rem;
+}
+
+.c12 {
+  font-size: 1.6rem;
+  color: #8C8C8C;
+  margin-top: 1.6rem;
+}
+
+.c13 {
+  font-size: 2.0rem;
+  color: #ffffff;
+  line-height: 1;
+  margin: 0.4rem 0 0.6rem 0;
+}
+
+.c14 {
+  font-size: 1.6rem;
+  color: #D3D3D3;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 1.6rem;
+}
+
+.c16 {
+  font-size: 1.4rem;
+  color: #8C8C8C;
+  margin-left: 0.8rem;
+}
+
+@media (max-width:768px) {
+  .c2 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:768px) {
+  .c6 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:450px) {
+  .c0 {
+    padding: 15rem 5.6rem 5.6rem 5.6rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    padding: 2rem 2rem 2rem 5.6rem;
+  }
+}
+
+@media (min-width:1170px) {
+  .c0 {
+    max-width: 130rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media (min-width:768px) {
+  .c5::before {
+    border-top-left-radius: 1.4rem;
+    border-bottom-left-radius: 1.4rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+@media (min-width:768px) {
+  .c5 {
+    -webkit-flex: 0.8;
+    -ms-flex: 0.8;
+    flex: 0.8;
+    max-width: 39rem;
+    height: 100%;
+    border-top-left-radius: 1.4rem;
+    border-bottom-left-radius: 1.4rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .c5 .sc-hKFxyN {
+    position: initial;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    margin: 8.4rem 5.6rem 5.6rem -5.6rem;
+    z-index: 30;
+  }
+}
+
+@media (min-width:768px) {
+  .c9 {
+    gap: 6rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 1.4rem;
+    border-bottom-right-radius: 1.4rem;
+    padding: calc(5.6rem + 2rem) calc(5.6rem + 2rem);
+  }
+}
+
+@media (min-width:768px) {
+  .c12 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c13 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c14 {
+    font-size: 1.8rem;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      <button
+        aria-label="Close character view mobile"
+        class="c3"
+      >
+        <svg
+          aria-hidden="true"
+          class="c4"
+          color="#fff"
+          fill="none"
+          focusable="false"
+          height="32"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="32"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="18"
+            x2="6"
+            y1="6"
+            y2="18"
+          />
+          <line
+            x1="6"
+            x2="18"
+            y1="6"
+            y2="18"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      aria-label="Background with blurred image of Rick Sanchez"
+      class="c5"
+    >
+      <div
+        class="c6"
+      >
+        <button
+          aria-label="Close character view desktop"
+          class="c7"
+          style="z-index: 50; margin: 1.6rem; align-self: flex-start; position: absolute;"
+        >
+          Close
+        </button>
+      </div>
+      <div
+        class="c8"
+      >
+        <div
+          class="c2"
+        >
+          <div
+            data-testid="Mock Character Card"
+          />
+        </div>
+        <div
+          class="c6"
+          style="align-items: center; justify-content: center; height: 100%; width: 100%;"
+        >
+          <div
+            data-testid="Mock Character Card"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="c9"
+    >
+      <div
+        class=""
+      >
+        <h2
+          class="c10"
+        >
+          About
+        </h2>
+        <p
+          class="c11"
+        >
+          Rick Sanchez is a male human. He is alive and well. Was last seen at Nov 10, 2017.
+        </p>
+      </div>
+      <div
+        class=""
+      >
+        <h2
+          class="c10"
+        >
+          Origin
+        </h2>
+        <p
+          class="c12"
+        >
+          Planet Two
+        </p>
+        <p
+          class="c13"
+        >
+          Second Earth (Same Dimension)
+        </p>
+        <p
+          class="c14"
+        >
+          Same Dimension
+        </p>
+        <div
+          class="c15"
+        >
+          <svg
+            aria-hidden="true"
+            class="c4"
+            color="#8c8c8c"
+            fill="none"
+            focusable="false"
+            height="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"
+            />
+            <circle
+              cx="9"
+              cy="7"
+              r="4"
+            />
+            <path
+              d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
+            />
+          </svg>
+          <p
+            class="c16"
+          >
+            2
+             residents
+          </p>
+        </div>
+      </div>
+      <div
+        class=""
+      >
+        <h2
+          class="c10"
+        >
+          Location
+        </h2>
+        <p
+          class="c12"
+        >
+          Planet
+        </p>
+        <p
+          class="c13"
+        >
+          Earth (Replacement Dimension)
+        </p>
+        <p
+          class="c14"
+        >
+          Replacement Dimension
+        </p>
+        <div
+          class="c15"
+        >
+          <svg
+            aria-hidden="true"
+            class="c4"
+            color="#8c8c8c"
+            fill="none"
+            focusable="false"
+            height="14"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"
+            />
+            <circle
+              cx="9"
+              cy="7"
+              r="4"
+            />
+            <path
+              d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
+            />
+          </svg>
+          <p
+            class="c16"
+          >
+            2
+             residents
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`

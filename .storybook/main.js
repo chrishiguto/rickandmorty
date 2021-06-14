@@ -1,9 +1,15 @@
 module.exports = {
+  typescript: {
+    reactDocgen: 'none'
+  },
   stories: ['../src/components/**/stories.tsx'],
   addons: ['@storybook/addon-essentials'],
   babel: async (options) => ({
     ...options,
-    plugins: [...options.plugins,  require.resolve('@babel/plugin-transform-react-jsx')]
+    plugins: [
+      ...options.plugins,
+      require.resolve('@babel/plugin-transform-react-jsx')
+    ]
   }),
   webpackFinal: (config) => {
     config.resolve.modules.push(`${process.cwd()}/src`)

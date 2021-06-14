@@ -19,34 +19,42 @@ exports[
   background-image: url(https://rickandmortyapi.com/api/character/avatar/1.jpeg);
   background-size: cover;
   border-radius: 0.8rem;
-  border: 0.2rem solid #606060;
+  box-shadow: 0px 0px 0px 0.2rem #606060;
+  border: 0;
   -webkit-backdrop-filter: blur(0);
   backdrop-filter: blur(0);
-  -webkit-transition: 0.1s ease-in-out;
-  transition: 0.1s ease-in-out;
+  -webkit-transition: 0.1s cubic-bezier(0.4,0,0.2,1);
+  transition: 0.1s cubic-bezier(0.4,0,0.2,1);
   height: 18.7rem;
   width: 18.7rem;
   background-position: center -3rem;
+}
+
+.c3 {
+  font-size: 2.0rem;
+}
+
+.c5 {
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 .c1 {
   padding: 0.8rem 1.4rem;
   background-color: #1B1B1B;
   color: #ffffff;
-  font-family: 'Seravek',sans-serif;
   width: 100%;
   text-align: left;
-  background: rgba(0,0,0,0.6);
-  -webkit-backdrop-filter: blur(2.3rem);
-  backdrop-filter: blur(2.3rem);
+  background: rgba(0,0,0,0.7);
+  -webkit-backdrop-filter: blur(2rem);
+  backdrop-filter: blur(2rem);
 }
 
-.c2 {
-  font-size: 2.0rem;
-}
-
-.c3 {
-  font-size: 1.2rem;
+.c1 .c2,
+.c1 .c4 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 <div
@@ -58,12 +66,12 @@ exports[
     class="c1"
   >
     <h3
-      class="c2"
+      class="c2 c3"
     >
       Rick Sanchez
     </h3>
     <p
-      class="c3"
+      class="c4 c5"
     >
       Human
     </p>

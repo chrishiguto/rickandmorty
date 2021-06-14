@@ -1,6 +1,8 @@
 import { Story, Meta } from '@storybook/react/types-6-0'
 import CharacterCard, { CharacterCardProps } from '.'
 
+import characterCardMock from './mock'
+
 export default {
   title: 'CharacterCard',
   component: CharacterCard,
@@ -8,6 +10,9 @@ export default {
     backgrounds: {
       default: 'dark'
     }
+  },
+  args: {
+    ...characterCardMock
   }
 } as Meta
 

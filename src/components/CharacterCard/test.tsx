@@ -4,16 +4,13 @@ import userEvent from '@testing-library/user-event'
 import { renderWithTheme } from 'utils/tests/helpers'
 
 import CharacterCard from '.'
-
-const props = {
-  img: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-  charName: 'Rick Sanchez',
-  charType: 'Human'
-}
+import characterCardMock from './mock'
 
 describe('<CharacterCard />', () => {
   it('should render the character card as div by default', () => {
-    const { container } = renderWithTheme(<CharacterCard {...props} />)
+    const { container } = renderWithTheme(
+      <CharacterCard {...characterCardMock} />
+    )
 
     expect(
       screen.getByRole('heading', { name: /rick sanchez/i })
@@ -22,7 +19,7 @@ describe('<CharacterCard />', () => {
 
     expect(screen.getByLabelText(/rick sanchez card/i)).toHaveStyleRule(
       'background-image',
-      `url(${props.img})`
+      `url(${characterCardMock.image})`
     )
 
     expect(container.firstChild).toMatchSnapshot()
@@ -31,7 +28,9 @@ describe('<CharacterCard />', () => {
   it('should render the character card as button', async () => {
     const mockFn = jest.fn()
 
-    renderWithTheme(<CharacterCard {...props} as="button" onClick={mockFn} />)
+    renderWithTheme(
+      <CharacterCard {...characterCardMock} as="button" onClick={mockFn} />
+    )
 
     const card = screen.getByRole('button', { name: /rick sanchez card/i })
 
@@ -45,7 +44,7 @@ describe('<CharacterCard />', () => {
   })
 
   it('should render a grayscale character card if isDead prop is true', () => {
-    renderWithTheme(<CharacterCard {...props} as="button" isDead />)
+    renderWithTheme(<CharacterCard {...characterCardMock} as="button" isDead />)
 
     expect(screen.getByLabelText(/rick sanchez card/i)).toHaveStyleRule(
       'filter',
@@ -53,9 +52,13 @@ describe('<CharacterCard />', () => {
     )
   })
 
-  it('should render a black stripe if transparenStripe props is false', () => {
+  it('should render a black stripe if transparenStripe characterCardMock is false', () => {
     renderWithTheme(
-      <CharacterCard {...props} as="button" transparentStripe={false} />
+      <CharacterCard
+        {...characterCardMock}
+        as="button"
+        transparentStripe={false}
+      />
     )
 
     expect(
@@ -63,22 +66,43 @@ describe('<CharacterCard />', () => {
     ).toHaveStyle({ 'background-color': '#1B1B1B' })
   })
 
-  it('should render a large character card', () => {
-    renderWithTheme(<CharacterCard {...props} as="button" size="large" />)
+  it('should render a medium character card', () => {
+    renderWithTheme(
+      <CharacterCard {...characterCardMock} as="button" size="medium" />
+    )
 
     expect(screen.getByLabelText(/rick sanchez card/i)).toHaveStyle({
-      height: '47rem',
-      width: '40rem'
+      width: '25.4rem',
+      height: '22.4rem',
+      'background-position': 'background-position'
     })
   })
 
-  it('should render a yellow border and box shadow if hover prop is true', async () => {
-    renderWithTheme(<CharacterCard {...props} as="button" hover />)
+  it('should render a large character card', () => {
+    renderWithTheme(
+      <CharacterCard {...characterCardMock} as="button" size="large" />
+    )
+
+    expect(screen.getByLabelText(/rick sanchez card/i)).toHaveStyle({
+      width: '100%',
+      height: '80%',
+      'max-height': '59.8rem',
+      'max-width': '40rem',
+      'min-width': '30rem'
+    })
+  })
+
+  it('should render box shadow if hover prop is true', async () => {
+    renderWithTheme(<CharacterCard {...characterCardMock} as="button" hover />)
 
     const card = screen.getByLabelText(/rick sanchez card/i)
 
-    expect(card).toHaveStyleRule('border-color', '#cbd736', {
-      modifier: ':hover'
-    })
+    expect(card).toHaveStyleRule(
+      'box-shadow',
+      '0 0 0 0.3rem #cbd736,0 0 0.5rem 0.4rem #cbd736',
+      {
+        modifier: ':hover'
+      }
+    )
   })
 })

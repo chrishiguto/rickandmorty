@@ -1,4 +1,7 @@
 import { ButtonHTMLAttributes, HTMLAttributes } from 'react'
+
+import { CharacterProps } from 'pages'
+
 import * as S from './styles'
 
 type CharacterCardTypes =
@@ -6,20 +9,18 @@ type CharacterCardTypes =
   | HTMLAttributes<HTMLDivElement>
 
 export type CharacterCardProps = {
-  img: string
-  charName: string
-  charType: string
   transparentStripe?: boolean
   isDead?: boolean
-  size?: 'small' | 'large'
+  size?: 'small' | 'medium' | 'large'
   hover?: boolean
   as?: React.ElementType
-} & CharacterCardTypes
+} & CharacterCardTypes &
+  Pick<CharacterProps, 'image' | 'name' | 'species'>
 
 const CharacterCard = ({
-  img,
-  charName,
-  charType,
+  image,
+  name,
+  species,
   transparentStripe = true,
   isDead = false,
   size = 'small',
@@ -29,17 +30,17 @@ const CharacterCard = ({
   <S.Wrapper
     hover={hover}
     size={size}
-    img={img}
+    img={image}
     isDead={isDead}
     {...props}
-    aria-label={`${charName} card`}
+    aria-label={`${name} card`}
   >
     <S.Stripe
       transparent={transparentStripe}
-      aria-label={`${charName}'s stripe with informations`}
+      aria-label={`${name}'s stripe with informations`}
     >
-      <S.Name>{charName}</S.Name>
-      <S.Type>{charType}</S.Type>
+      <S.Name>{name}</S.Name>
+      <S.Type>{species}</S.Type>
     </S.Stripe>
   </S.Wrapper>
 )

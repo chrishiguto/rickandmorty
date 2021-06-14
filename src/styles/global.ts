@@ -1,23 +1,72 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
+import media from 'styled-media-query'
 
 const GlobalStyles = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  ${({ theme }) => css`
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
 
-  html {
-    font-size: 62.5%;
-  }
+      &::before,
+      &::after {
+        box-sizing: inherit;
+      }
+    }
 
-  html, body, #__next {
-    height: 100%;
-  }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      background-color: transparent !important;
+      -webkit-text-fill-color: #fff;
+      transition: background-color 5000s ease-in-out 0s;
+    }
 
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-  }
+    ${media.greaterThan('medium')`
+      &::-webkit-scrollbar {
+        width: 0.8rem;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: ${theme.colors.lightBlack};
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 1.4rem;
+        background: ${theme.colors.gray};
+
+        &:hover {
+          background: ${theme.colors.gray};
+        }
+      }
+    `}
+
+    #nprogress .bar {
+      background-color: ${theme.colors.yellow};
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    input,
+    button,
+    body {
+      font-family: ${theme.font.family};
+    }
+  `}
 `
 
 export default GlobalStyles
