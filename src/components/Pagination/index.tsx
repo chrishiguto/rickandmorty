@@ -8,7 +8,7 @@ export type PaginationProps = {
   next: number | null
   pages: number
   activePage: number
-  onChange: (value: number) => void
+  onChange: (value: number | null) => void
 }
 
 type PageProps = {
