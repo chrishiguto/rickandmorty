@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project created for inGaia front-end ch
 
 ## Demo
 
-You can check the projeto demo version [here](vercel.app).
+You can check the projeto demo version [here](https://rickandmortyingaia.vercel.app/).
 
 ## What is inside?
 
