@@ -8,7 +8,7 @@ export type PaginationProps = {
   next: number | null
   pages: number
   activePage: number
-  onChange: (value: number | null) => void
+  onChange: (value: number) => void
 }
 
 type PageProps = {
@@ -139,7 +139,7 @@ const Pagination = ({
     <S.Wrapper>
       <S.ArrowButton
         aria-label="Previous page button"
-        onClick={() => onChange(prev)}
+        onClick={prev === null ? undefined : () => onChange(prev)}
         disabled={prev === null}
       >
         <ChevronLeft size={24} strokeWidth={2} />
