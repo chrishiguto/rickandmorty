@@ -58,6 +58,17 @@ const CharacterView = ({
     return `${firstSentence}. ${secondSentence}. ${thirdSentence}.`
   }
 
+  const getPlaceInformation = (
+    info: string | undefined | 'unknown',
+    fallback: string
+  ) => {
+    if (!info || info === 'unknown') {
+      return fallback
+    }
+
+    return info
+  }
+
   return (
     <S.Wrapper>
       <S.Container>
@@ -115,10 +126,12 @@ const CharacterView = ({
 
           <S.Information>
             <Heading>Origin</Heading>
-            <S.Type>{origin?.type || 'Unknown Planet'}</S.Type>
-            <S.Name>{origin?.name || 'Unknown'}</S.Name>
+            <S.Type>
+              {getPlaceInformation(origin?.type, 'Unknown Planet')}
+            </S.Type>
+            <S.Name>{getPlaceInformation(origin?.name, 'Unknown')}</S.Name>
             <S.Dimension>
-              {origin?.dimension || 'Unknown Dimension'}
+              {getPlaceInformation(origin?.dimension, 'Unknown Dimension')}
             </S.Dimension>
             {!!origin?.residents && (
               <S.Residents>
@@ -130,10 +143,12 @@ const CharacterView = ({
 
           <S.Information>
             <Heading>Location</Heading>
-            <S.Type>{location?.type || 'Unknown Planet'}</S.Type>
-            <S.Name>{location?.name || 'Unknown'}</S.Name>
+            <S.Type>
+              {getPlaceInformation(location?.type, 'Unknown Planet')}
+            </S.Type>
+            <S.Name>{getPlaceInformation(location?.name, 'Unknown')}</S.Name>
             <S.Dimension>
-              {location?.dimension || 'Unknown Dimension'}
+              {getPlaceInformation(location?.dimension, 'Unknown Dimension')}
             </S.Dimension>
             {!!location?.residents && (
               <S.Residents>
