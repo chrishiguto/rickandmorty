@@ -1,11 +1,12 @@
 
 ![Rick and Morty](https://github.com/chrishiguto/rickandmorty/blob/main/public/img/heading.png)
 
-This is a [Next.js](https://nextjs.org/) project created for inGaia front-end challenge. It's a Rick and Morty application that uses the community api to fetch data of the characters.
+This is a [Next.js](https://nextjs.org/) project created for inGaia front-end challenge. It's a Rick and Morty application that uses the community [API](https://rickandmortyapi.com/) to fetch data of the characters.
+By default, the app loads all the characters using Static Site Generation from Next.js and all the subsequent requests are made on the client side.
 
 ## Demo
 
-You can check the projeto demo version [here](https://rickandmortyingaia.vercel.app/).
+You can check the project demo version [here](https://rickandmortyingaia.vercel.app/).
 
 ## What is inside?
 
@@ -35,6 +36,21 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+You can check the each component in isolation from the application using Storybook:
+
+```bash
+npm run storybook
+# or
+yarn storybook
+```
+
+This application has 100% coverage in unit and integration tests, you can check by running:
+
+```bash
+npm run test
+# or
+yarn test
+```
 
 ## Commands
 
