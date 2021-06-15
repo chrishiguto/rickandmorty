@@ -46,8 +46,12 @@ const CharacterView = ({
     )} ${phraseGender} ${phraseSpecies}`
 
     const secondSentence = `${
-      phraseStatus === 'unknown' ? '' : getPronoumByGender(phraseGender)
-    } ${getStatus(phraseStatus)}`
+      phraseStatus === 'unknown'
+        ? `It can't be told if ${getPronoumByGender(
+            phraseGender
+          ).toLowerCase()} alive or dead`
+        : `${getPronoumByGender(phraseGender)} ${getStatus(phraseStatus)}`
+    }`
 
     const thirdSentence = `Was last seen at ${lastSeen}`
 

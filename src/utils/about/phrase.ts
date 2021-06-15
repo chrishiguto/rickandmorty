@@ -32,7 +32,7 @@ const phrase: PhraseProps = {
   status: {
     alive: 'alive and well',
     dead: 'dead',
-    unknown: `It can't be told if he is alive or dead`
+    unknown: ''
   }
 }
 
