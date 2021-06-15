@@ -18,6 +18,7 @@ import {
 
 import theme from 'styles/theme'
 import * as S from './styles'
+import { useCallback } from 'react'
 
 export type CharacterViewProps = {
   onClose: () => void
@@ -58,16 +59,16 @@ const CharacterView = ({
     return `${firstSentence}. ${secondSentence}. ${thirdSentence}.`
   }
 
-  const getPlaceInformation = (
-    info: string | undefined | 'unknown',
-    fallback: string
-  ) => {
-    if (!info || info === 'unknown') {
-      return fallback
-    }
+  const getPlaceInformation = useCallback(
+    (info: string | undefined | 'unknown', fallback: string) => {
+      if (!info || info === 'unknown') {
+        return fallback
+      }
 
-    return info
-  }
+      return info
+    },
+    []
+  )
 
   return (
     <S.Wrapper>
